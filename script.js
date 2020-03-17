@@ -16,10 +16,10 @@ function showSlides(n) {
   // get the array of divs' with classname myslides
   var slides = document.getElementsByClassName("mySlides");
   
-  console.log(slides)
+  console.log("slides:",slides,"slides.length:",slides.length)
   // get the array of divs' with classname dot 
   var dots = document.getElementsByClassName("dot");
-  // console.log(dots)
+  console.log(dots)
 
   // check for boundary 
   // The first if statement resets the slideIndex back to one,once the last slide is reached. 
@@ -28,17 +28,21 @@ function showSlides(n) {
   // when the first slide is showing, so that the last slide shows next.
 
   if (n > slides.length) {slideIndex = 1}   
+  // when n is 5 in this case there are four images, than the slideIndex is set to 1
   console.log(n > slides.length) 
   console.log("n:",n,"sides.length:",slides.length)
  
   if (n < 1) {slideIndex = slides.length}
   console.log("n < 1",n < 1)
+
+ 
   
-  for (i = 0; i < slides.length; i++) {
+  for (i = 0; i < slides.length; i++){
+
   // initially set the display to  
   // none for every image. 
-      slides[i].style.display = "none";  
-  }
+  slides[i].style.display = "none";  
+  };
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
