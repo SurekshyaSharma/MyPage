@@ -1,4 +1,5 @@
 var slideIndex = 1;
+// making a slideIndex a global variable
 showSlides(slideIndex);
 
 function plusSlides(n) {
@@ -18,7 +19,7 @@ function showSlides(n) {
   console.log(slides)
   // get the array of divs' with classname dot 
   var dots = document.getElementsByClassName("dot");
-  console.log(dots)
+  // console.log(dots)
 
   // check for boundary 
   // The first if statement resets the slideIndex back to one,once the last slide is reached. 
@@ -26,8 +27,13 @@ function showSlides(n) {
   // clicking on the left arrow 
   // when the first slide is showing, so that the last slide shows next.
 
-  if (n > slides.length) {slideIndex = 1}    
+  if (n > slides.length) {slideIndex = 1}   
+  console.log(n > slides.length) 
+  console.log("n:",n,"sides.length:",slides.length)
+ 
   if (n < 1) {slideIndex = slides.length}
+  console.log("n < 1",n < 1)
+  
   for (i = 0; i < slides.length; i++) {
   // initially set the display to  
   // none for every image. 
